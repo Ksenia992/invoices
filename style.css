@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.middle_block .comment_block textarea, .middle_block .inputs_block, input {
+  border: 1px solid #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  background: #b0c4de;
+  min-width: 1200px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+}
+
+.main {
+  background: #b0c4de;
+}
+.main .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.top_invoices {
+  position: relative;
+}
+.top_invoices::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #778899;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top_invoices .invoices {
+  color: #a9a9a9;
+  padding-left: 15px;
+  font-weight: bold;
+}
+.top_invoices .invoices::after {
+  content: "";
+  background: #778899;
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.actions {
+  margin-top: 20px;
+  background: #fff;
+}
+.actions .actions_text {
+  padding: 15px 15px;
+  font-weight: bold;
+}
+.actions .add_new {
+  background: #4285f4;
+  border: none;
+  color: #fff;
+  margin: 10px 15px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.all_invoices {
+  background: #fff;
+  margin-top: 30px;
+}
+.all_invoices .invoices_text {
+  padding-top: 20px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.table_header {
+  margin: 25px;
+  background: #b0c4de;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #778899;
+}
+.table_header .table_names {
+  padding: 10px;
+  width: 25%;
+}
+
+#main_two {
+  display: none;
+  background: #b0c4de;
+}
+#main_two .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.middle_block {
+  background: #fff;
+  margin-top: 30px;
+  padding: 25px;
+}
+.middle_block .first_line {
+  padding: 30px 20px;
+  display: flex;
+}
+.middle_block .first_line .number_block {
+  flex: 50%;
+}
+.middle_block .first_line h2,
+.middle_block .first_line h3 {
+  font-weight: bold;
+}
+.middle_block .first_line .in_date_block {
+  flex: 50%;
+  margin-left: 15px;
+}
+.middle_block .first_line .in_date_block .inv_date {
+  position: relative;
+}
+.middle_block .second_line {
+  padding: 0 20px;
+}
+.middle_block .second_line h4,
+.middle_block .second_line h5 {
+  font-weight: bold;
+}
+.middle_block .second_line .sup_date_inp {
+  width: 50%;
+}
+.middle_block .comment_block {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.middle_block .comment_block .save {
+  color: #fff;
+  background: #4285f4;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: auto;
+}
+.middle_block .comment_block textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  caret-color: #dcdcdc !important;
+}
+
+::-webkit-calendar-picker-indicator {
+  color: transparent;
+  opacity: 1;
+  background: url(assets/calendar.png) no-repeat center;
+  background-size: 15px;
+}
+
+#ul_inv {
+  display: flex;
+  margin: 25px;
+  border-bottom: 1px solid #808080;
+  justify-content: space-between;
+}
+#ul_inv li {
+  padding: 10px;
+  width: 25%;
+  overflow: hidden;
+}
+
+/* Медиа-запросы */
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: none;
+  }
+}

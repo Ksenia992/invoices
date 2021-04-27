@@ -1,0 +1,215 @@
+@import "reset.scss";
+
+// My styles
+
+$pm: 20px;
+$pm_2: 25px;
+$bckgr_color: #778899;
+$bckgr_color_2: #b0c4de;
+
+%border {
+  border: 1px solid #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  background: #b0c4de;
+  min-width: 1200px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  @extend %border;
+}
+
+.main {
+  background: $bckgr_color_2;
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: $pm;
+  }
+}
+
+.top_invoices {
+  position: relative;
+  &::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: $bckgr_color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .invoices {
+    color: #a9a9a9;
+    padding-left: 15px;
+    font-weight: bold;
+    &::after {
+      content: "";
+      background: $bckgr_color;
+      width: 90%;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+  }
+}
+
+.actions {
+  margin-top: $pm;
+  background: #fff;
+  .actions_text {
+    padding: 15px 15px;
+    font-weight: bold;
+  }
+
+  .add_new {
+    background: #4285f4;
+    border: none;
+    color: #fff;
+    margin: 10px 15px;
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.all_invoices {
+  background: #fff;
+  margin-top: 30px;
+  .invoices_text {
+    padding-top: $pm;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+}
+
+.table_header {
+  margin: $pm_2;
+  background: $bckgr_color_2;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #778899;
+  .table_names {
+    padding: 10px;
+    width: 25%;
+  }
+}
+
+#main_two {
+  display: none;
+  background: $bckgr_color_2;
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: $pm;
+  }
+}
+
+.middle_block {
+  background: #fff;
+  margin-top: 30px;
+  padding: $pm_2;
+  .inputs_block {
+    @extend %border;
+  }
+  .first_line {
+    padding: 30px 20px;
+    display: flex;
+    .number_block {
+      flex: 50%;
+    }
+    h2,
+    h3 {
+      font-weight: bold;
+    }
+    .in_date_block {
+      flex: 50%;
+      margin-left: 15px;
+      .inv_date {
+        position: relative;
+      }
+    }
+  }
+  .second_line {
+    padding: 0 20px;
+    h4,
+    h5 {
+      font-weight: bold;
+    }
+    .sup_date_inp {
+      width: 50%;
+    }
+  }
+  .comment_block {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    .save {
+      color: #fff;
+      background: #4285f4;
+      border: none;
+      cursor: pointer;
+      margin-top: $pm_2;
+      width: 100px;
+      padding: 8px;
+      border-radius: 5px;
+      margin-left: auto;
+    }
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+      caret-color: #dcdcdc !important;
+      @extend %border;
+    }
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  color: transparent;
+  opacity: 1;
+  background: url(assets/calendar.png) no-repeat center;
+  background-size: 15px;
+}
+
+#ul_inv {
+  display: flex;
+  margin: $pm_2;
+  border-bottom: 1px solid #808080;
+  justify-content: space-between;
+  li {
+    padding: 10px;
+    width: 25%;
+    overflow: hidden;
+  }
+}
+
+/* Медиа-запросы */
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: none;
+  }
+}

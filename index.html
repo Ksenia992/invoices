@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="storage.js"></script>
+  </head>
+  <body>
+    <!-- Первый блок -->
+    <div class="main" id="wrapp">
+      <div class="wrapper">
+        <header class="top_invoices">
+          <h1 class="invoices">Invoices</h1>
+        </header>
+        <div class="actions">
+          <h2 class="actions_text">Actions</h2>
+          <button class="add_new" id="btn">Add new</button>
+        </div>
+        <div class="all_invoices" id="blinv">
+          <h2 class="invoices_text">Invoices</h2>
+          <ul class="table_header">
+            <li class="table_names">Create</li>
+            <li class="table_names">No</li>
+            <li class="table_names">Supply</li>
+            <li class="table_names">Comment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Второй блок -->
+    <div id="main_two">
+      <div class="wrapper" id="wrapp_two">
+        <header class="top_invoices">
+          <h1 class="invoices">Create Invoice</h1>
+        </header>
+        <div class="middle_block">
+          <div class="inputs_block">
+            <div class="first_line">
+              <div class="number_block">
+                <h2>Number:</h2>
+                <input
+                  type="text"
+                  placeholder="Enter your number"
+                  id="number"
+                />
+              </div>
+              <div class="in_date_block">
+                <h3>Invoice Date:</h3>
+                <p class="inv_date">
+                  <input
+                    placeholder="Select date"
+                    type="text"
+                    onfocus="(this.type='date')"
+                    id="inv_inp_date"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="second_line">
+              <div class="sup_date_block">
+                <h4>Supply Date:</h4>
+                <input
+                  placeholder="Select date"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  class="sup_date_inp"
+                />
+              </div>
+              <div class="comment_block">
+                <h5>Comment:</h5>
+                <textarea name="text" id="textarea"></textarea>
+                <button class="save" id="save_btn" disabled>Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
